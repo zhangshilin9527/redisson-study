@@ -1,0 +1,23 @@
+server:
+  port: 10086
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+      circuitBreaker:
+        requestVolumeThreshold: 5
+#        sleepWindowInMilliseconds : 5000
+
+#  threadpool:
+#    default:
+#      coreSize: 10
+
+
