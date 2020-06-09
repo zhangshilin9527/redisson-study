@@ -1,7 +1,6 @@
 package com.xiaolinzi.study.redislock.controller;
 
 
-
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +65,7 @@ public class RedisLockController {
      * <p>
      * redisLockDemo2 缺陷：
      * redisLockDemo2虽然解决了锁不能释放的问题，但是又带来了一个新问题，那就是锁被别的线程释放，这个即使起来有点绕。所以锁
-     * 是如何被其他线程释放的在我的博客中@see <a href="https://blog.csdn.net/qq_38630810">redis分布式锁介绍及redis实战框架redisson</a>给出了解释。
+     * 是如何被其他线程释放的在我的博客中@see <a href="https://blog.csdn.net/qq_38630810/article/details/106500034">redis分布式锁在项目中的实现一 手动实现redis分布式锁</a>给出了解释。
      * <p>
      * 若解决此问题，请参照{@link #redisLockDemo3()}
      *
@@ -128,9 +127,9 @@ public class RedisLockController {
 
     /**
      * redisLockDemo4:
-     *            介绍了redis客户端redisson，redisson对redis使用大量lua脚本对redis进行了操作进行封装，redisson具体使用
-     *  文档请参照<a href="https://github.com/redisson/redisson/wiki/Table-of-Content/">Table of Content</a>；
-     *  redisson具体是怎么实现分布式锁以及如何保证锁不会失效的，请参照博客<a href="https://blog.csdn.net/qq_38630810">redis分布式锁介绍及redis实战框架redisson</a>
+     * 介绍了redis客户端redisson，redisson对redis使用大量lua脚本对redis进行了操作进行封装，redisson具体使用
+     * 文档请参照<a href="https://github.com/redisson/redisson/wiki/Table-of-Content/">Table of Content</a>；redisson具
+     * 体是怎么实现分布式锁以及如何保证锁不会失效的请参照博客<a href="https://blog.csdn.net/qq_38630810/article/details/106500951">redis分布式锁在项目中的实现二 Redisson的使用，原理及源码解读</a>
      *
      * @return
      */
